@@ -3,11 +3,41 @@ console.log('***** Cart Functions *****');
 // We want to see how you are testing your code!!!
 
 
+// Empty Basket Array
+let basket = [];
+console.log('Here is my empty basket', basket);
+// addItem function
+function addItem(newItem){
+    let item = basket.push(newItem);
+    return true;
+}
+addItem("apple");
+addItem("watermelon")
+addItem("Coconut")
+console.log('After shopping my basket has more items in it, ', basket);
 
-
-
-
-
+function listItems(array){
+    for(let i = 0; i < array.length; i++){
+        console.log(array[i])
+    }
+        return;
+}
+listItems(basket);
+addItem("Blueberries");
+addItem("Twizzlers");
+addItem("Gummy Bears")
+listItems(basket);
+console.log(basket)
+console.log(basket.length)
+function empty(array){
+    for(let i = 0; i < array.length; i++){ //do i have this set up properly? When it comes to testing this on ther browser, only a few items are getting removed, 3 to be exact. 
+        basket.shift(i)
+    }
+    return;
+}
+empty(basket);
+console.log(basket.length)
+listItems(basket);
 
 
 
