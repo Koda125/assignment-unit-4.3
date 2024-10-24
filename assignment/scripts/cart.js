@@ -29,15 +29,14 @@ addItem("Gummy Bears")
 listItems(basket);
 console.log(basket)
 console.log(basket.length)
-function empty(array){
-    for(let i = 0; i < array.length; i++){ //do i have this set up properly? When it comes to testing this on ther browser, only a few items are getting removed, 3 to be exact. 
-        basket.shift(i)
+function empty(){
+    while( basket.length > 0){
+        basket.pop()
     }
-    return;
+    return basket;
 }
-empty(basket);
-console.log(basket.length)
-listItems(basket);
+empty();
+console.log(basket);
 
 
 
